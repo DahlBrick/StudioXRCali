@@ -1,21 +1,15 @@
-/**
- * ─────────────────────────────────────────
- *  ANDRES — Edita solo este archivo
- *  Campos disponibles abajo ↓
- * ─────────────────────────────────────────
- */
 const MEMBER_ANDRES = {
   id:      'andres',
   index:   2,
-  name:    'Andrés',          // ← Tu nombre completo
-  role:    'UX Lead · Co-Founder',
-  bio:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum, nec facilisis arcu consectetur. Proin gravida nibh vel velit auctor aliquet aenean sollicitudin lorem quis bibendum.',
+  name:    'Andrés Gabriel Fernández Romero',
+  role:    'Developer',
+  bio:     'Estudiante de ingeniería multimedia en la Universidad Autónoma de Occidente, próximo a presentar mi trabajo de grado, con formación complementaria de cursos en línea y aprendizaje autónomo. Durante más de tres años he participado en proyectos académicos de desarrollo de software, de mediana a alta complejidad, lo que me ha permitido fortalecer tanto mis competencias técnicas como mi capacidad para trabajar en equipo, liderar iniciativas y adaptarme a diferentes retos.',
   photo:   'assets/photos/andres.jpg',
   initial: 'AN',
-  skills:  ['UX Research', 'Interaction Design', 'Figma', 'VR/AR UX', 'Usability Testing'],
+  skills:  ['Fullstack Developer', 'Unity 2D/3D', 'Figma', 'MetaQuest', 'XR-VR/AR/MR'],
   links: {
-    linkedin:  'https://linkedin.com/',
-    github:    '',
+    linkedin:  'https://www.linkedin.com/in/andres-gabriel-fernandez-romero/',
+    github:    'https://github.com/AndresG309',
     portfolio: ''
   },
   projects: []
