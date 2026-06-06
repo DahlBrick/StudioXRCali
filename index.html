@@ -1,216 +1,387 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STUDIO XR — Experiencias Inmersivas & UX</title>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Space+Mono:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <a href="#" class="nlogo">STUDIO<span>XR</span></a>
-  <ul class="nlinks">
-    <li><a href="#empresa">Empresa</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#equipo">Equipo</a></li>
-  </ul>
-  <a href="#contacto" class="ncta">Hablemos</a>
-  <button class="nhbg" id="hbg" aria-label="Menú"><span></span><span></span><span></span></button>
-</nav>
-<div class="nmob" id="mob">
-  <a href="#empresa"   onclick="cm()">Empresa</a>
-  <a href="#servicios" onclick="cm()">Servicios</a>
-  <a href="#proyectos" onclick="cm()">Proyectos</a>
-  <a href="#equipo"    onclick="cm()">Equipo</a>
-  <a href="#contacto"  onclick="cm()">Hablemos →</a>
-</div>
-
-
-<!-- CURSOR -->
-<div id="scroll-line"></div>
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
-
-<!-- HERO -->
-<section id="hero" style="padding:0">
-  <canvas id="hero-canvas"></canvas>
-  <div class="hleft">
-    <p class="htag">Estudio · Cali, Colombia</p>
-    <h1 class="hh1">Diseño<br>de lo que<br><em>se siente.</em></h1>
-    <p class="hdesc">Diseñamos experiencias inmersivas y UX que transforman la manera en que personas y empresas se relacionan con la tecnología.</p>
-    <div class="hacts">
-      <a href="#proyectos" class="btnp">Ver Proyectos</a>
-      <a href="#empresa" class="btng">Conocernos</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STUDIO XR — Experiencias Inmersivas & UX</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Space+Mono:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nlogo">STUDIO<span>XR</span></a>
+      <ul class="nlinks">
+        <li><a href="#empresa">Empresa</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+      </ul>
+      <a href="#contacto" class="ncta">Hablemos</a>
+      <button class="nhbg" id="hbg" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nmob" id="mob">
+      <a href="#empresa" onclick="cm()">Empresa</a>
+      <a href="#servicios" onclick="cm()">Servicios</a>
+      <a href="#proyectos" onclick="cm()">Proyectos</a>
+      <a href="#equipo" onclick="cm()">Equipo</a>
+      <a href="#contacto" onclick="cm()">Hablemos →</a>
     </div>
-    <div class="hstats">
-      <div class="sitem"><span class="snum">4</span><span class="slbl">Especialistas</span></div>
-      <div class="sitem"><span class="snum">20+</span><span class="slbl">Proyectos</span></div>
-      <div class="sitem"><span class="snum">Múltiples</span><span class="slbl">Plataformas</span></div>
-    </div>
-  </div>
-  <div class="hright">
-    <div class="hvg">
-      <div class="hcell"><span class="clbl">UX</span></div>
-      <div class="hcell"><span class="clbl">XR</span></div>
-      <div class="hcell"><span class="clbl">●</span></div>
-      <div class="hcell"><span class="clbl">3D</span></div>
-    </div>
-  </div>
-</section>
 
-<!-- MARQUEE -->
-<div class="mwrap">
-  <div class="mtrack">
-    <span class="mi">Experiencias Inmersivas <span class="md"></span></span>
-    <span class="mi">UX Design <span class="md"></span></span>
-    <span class="mi">Virtual Reality <span class="md"></span></span>
-    <span class="mi">Augmented Reality <span class="md"></span></span>
-    <span class="mi">Interaction Design <span class="md"></span></span>
-    <span class="mi">3D &amp; Motion <span class="md"></span></span>
-    <span class="mi">Experiencias Inmersivas <span class="md"></span></span>
-    <span class="mi">UX Design <span class="md"></span></span>
-    <span class="mi">Virtual Reality <span class="md"></span></span>
-    <span class="mi">Augmented Reality <span class="md"></span></span>
-    <span class="mi">Interaction Design <span class="md"></span></span>
-    <span class="mi">3D &amp; Motion <span class="md"></span></span>
-  </div>
-</div>
+    <!-- CURSOR -->
+    <div id="scroll-line"></div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
 
-<!-- EMPRESA -->
-<section id="empresa" class="diag">
-  <div class="section-particles"><canvas id="particles-empresa"></canvas></div>
-  <div class="cont">
-    <div class="egrid">
-      <div class="etext">
-        <p class="stag">Sobre la empresa</p>
-        <h2 class="stitle">Quiénes<br><span>Somos</span></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum, nec facilisis arcu consectetur. Nulla facilisi. Proin gravida nibh vel velit auctor aliquet.</p>
-        <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-        <p style="margin-top:26px"><a href="#contacto" class="btnp">Contáctanos</a></p>
+    <!-- HERO -->
+    <section id="hero" style="padding: 0">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hleft">
+        <p class="htag">Estudio · Cali, Colombia</p>
+        <h1 class="hh1">Diseño<br />de lo que<br /><em>se siente.</em></h1>
+        <p class="hdesc">
+          Diseñamos experiencias inmersivas y UX que transforman la manera en
+          que personas y empresas se relacionan con la tecnología.
+        </p>
+        <div class="hacts">
+          <a href="#proyectos" class="btnp">Ver Proyectos</a>
+          <a href="#empresa" class="btng">Conocernos</a>
+        </div>
+        <div class="hstats">
+          <div class="sitem">
+            <span class="snum">4</span><span class="slbl">Especialistas</span>
+          </div>
+          <div class="sitem">
+            <span class="snum">20+</span><span class="slbl">Proyectos</span>
+          </div>
+          <div class="sitem">
+            <span class="snum">Múltiples</span
+            ><span class="slbl">Plataformas</span>
+          </div>
+        </div>
       </div>
-      <div class="ecards rv">
-        <div class="ecard"><div class="enum">04</div><div class="elbl">Especialistas</div><div class="edesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit nec facilisis.</div></div>
-        <div class="ecard"><div class="enum">XR</div><div class="elbl">Plataformas</div><div class="edesc">Diseño inmersivo para VR, AR y entornos 3D interactivos.</div></div>
-        <div class="ecard"><div class="enum">UX</div><div class="elbl">Enfoque</div><div class="edesc">Lorem ipsum vel auctor aliquet aenean sollicitudin lorem.</div></div>
-        <div class="ecard"><div class="enum">∞</div><div class="elbl">Impacto</div><div class="edesc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+      <!-- <div class="hright">
+        <div class="hvg">
+          <div class="hcell"><span class="clbl">UX</span></div>
+          <div class="hcell"><span class="clbl">XR</span></div>
+          <div class="hcell"><span class="clbl">●</span></div>
+          <div class="hcell"><span class="clbl">3D</span></div>
+        </div>
+      </div> -->
+    </section>
 
-<!-- SERVICIOS -->
-<section id="servicios" class="diag">
-  <div class="section-particles"><canvas id="particles-servicios"></canvas></div>
-  <div class="cont">
-    <div class="sintro">
-      <div>
-        <p class="stag">Servicios</p>
-        <h2 class="stitle">Qué<br><span>Hacemos</span></h2>
+    <!-- MARQUEE -->
+    <!-- <div class="mwrap">
+      <div class="mtrack">
+        <span class="mi">Experiencias Inmersivas <span class="md"></span></span>
+        <span class="mi">UX Design <span class="md"></span></span>
+        <span class="mi">Virtual Reality <span class="md"></span></span>
+        <span class="mi">Augmented Reality <span class="md"></span></span>
+        <span class="mi">Interaction Design <span class="md"></span></span>
+        <span class="mi">3D &amp; Motion <span class="md"></span></span>
+        <span class="mi">Experiencias Inmersivas <span class="md"></span></span>
+        <span class="mi">UX Design <span class="md"></span></span>
+        <span class="mi">Virtual Reality <span class="md"></span></span>
+        <span class="mi">Augmented Reality <span class="md"></span></span>
+        <span class="mi">Interaction Design <span class="md"></span></span>
+        <span class="mi">3D &amp; Motion <span class="md"></span></span>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum, nec facilisis arcu consectetur. Proin gravida nibh vel velit auctor aliquet aenean sollicitudin.</p>
-    </div>
-    <div>
-      <div class="sitem2 rv"><span class="snum">01</span><span class="sname">Experiencias en Realidad Virtual</span><span class="stag2">VR · XR</span></div>
-      <div class="sitem2 rv"><span class="snum">02</span><span class="sname">Realidad Aumentada &amp; Mixta</span><span class="stag2">AR · MR</span></div>
-      <div class="sitem2 rv"><span class="snum">03</span><span class="sname">Diseño UX / UI para Plataformas</span><span class="stag2">UX · UI</span></div>
-      <div class="sitem2 rv"><span class="snum">04</span><span class="sname">Consultoría en Experiencia de Usuario</span><span class="stag2">Research · Strategy</span></div>
-      <div class="sitem2 rv"><span class="snum">05</span><span class="sname">Prototipado Interactivo &amp; 3D</span><span class="stag2">3D · Motion</span></div>
-    </div>
-  </div>
-</section>
+    </div> -->
 
-<!-- PROYECTOS -->
-<section id="proyectos" class="diag">
-  <div class="section-particles"><canvas id="particles-proyectos"></canvas></div>
-  <div class="cont">
-    <div id="gallery-3d-section" style="margin-bottom:0">
-  <!-- THE GALLERY — sala 3D -->
-  <div style="position:relative">
-    <div id="gallery-3d" style="width:100%;height:560px;border-radius:0;overflow:hidden;border:1px solid rgba(232,96,10,0.15)"></div>
-    <div id="gallery-overlay"></div>
-    <div style="position:absolute;bottom:20px;right:24px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(240,237,232,0.28);pointer-events:none">
-      Hover para explorar · Click para abrir · ← → para rotar
-    </div>
-  </div>
-  <p style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(240,237,232,0.25);text-align:center;padding:14px 0 40px;border-bottom:1px solid rgba(240,237,232,0.06)">
-    — También disponibles como tarjetas —
-  </p>
-</div>
+    <!-- EMPRESA -->
+    <section id="empresa" class="diag">
+      <div class="section-particles">
+        <canvas id="particles-empresa"></canvas>
+      </div>
+      <div class="cont">
+        <div class="egrid">
+          <div class="etext">
+            <p class="stag">Sobre el equipo</p>
+            <h2 class="stitle">Quiénes<br /><span>Somos</span></h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              vehicula leo nec justo fermentum, nec facilisis arcu consectetur.
+              Nulla facilisi. Proin gravida nibh vel velit auctor aliquet.
+            </p>
+            <p>
+              Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+              consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
+              amet nibh vulputate cursus a sit amet mauris.
+            </p>
+            <p style="margin-top: 26px">
+              <a href="#contacto" class="btnp">Contáctanos</a>
+            </p>
+          </div>
+          <div class="ecards rv">
+            <div class="ecard">
+              <div class="enum">04</div>
+              <div class="elbl">Especialistas</div>
+              <div class="edesc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit nec
+                facilisis.
+              </div>
+            </div>
+            <div class="ecard">
+              <div class="enum">XR</div>
+              <div class="elbl">Plataformas</div>
+              <div class="edesc">
+                Diseño inmersivo para VR, AR y entornos 3D interactivos.
+              </div>
+            </div>
+            <div class="ecard">
+              <div class="enum">UX</div>
+              <div class="elbl">Enfoque</div>
+              <div class="edesc">
+                Lorem ipsum vel auctor aliquet aenean sollicitudin lorem.
+              </div>
+            </div>
+            <div class="ecard">
+              <div class="enum">∞</div>
+              <div class="elbl">Impacto</div>
+              <div class="edesc">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="phdr">
-      <div>
-        <p class="stag">Portafolio</p>
-        <h2 class="stitle">Proyectos en los<br><span>que hemos trabajado</span></h2>
+    <!-- SERVICIOS -->
+    <section id="servicios" class="diag">
+      <div class="section-particles">
+        <canvas id="particles-servicios"></canvas>
       </div>
-      <a href="#" class="plink">Ver todos →</a>
-    </div>
-    <div class="pgrid">
-      <div class="pcard rv">
-        <div class="tilt-glare"></div>
-        <div class="pph"><span class="ppt">PROJECT 01</span></div>
-        <div class="pov"><p class="pcat">Experiencia VR · Cliente corporativo</p><h3 class="ptitle">Título del Proyecto Destacado</h3><p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum.</p></div>
-        <div class="parr">↗</div>
+      <div class="cont">
+        <div class="sintro">
+          <div>
+            <p class="stag">Servicios</p>
+            <h2 class="stitle">Qué<br /><span>Hacemos</span></h2>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            vehicula leo nec justo fermentum, nec facilisis arcu consectetur.
+            Proin gravida nibh vel velit auctor aliquet aenean sollicitudin.
+          </p>
+        </div>
+        <div>
+          <div class="sitem2 rv">
+            <span class="snum">01</span
+            ><span class="sname">Experiencias en Realidad Virtual</span
+            ><span class="stag2">VR · XR</span>
+          </div>
+          <div class="sitem2 rv">
+            <span class="snum">02</span
+            ><span class="sname">Realidad Aumentada &amp; Mixta</span
+            ><span class="stag2">AR · MR</span>
+          </div>
+          <div class="sitem2 rv">
+            <span class="snum">03</span
+            ><span class="sname">Diseño UX / UI para Plataformas</span
+            ><span class="stag2">UX · UI</span>
+          </div>
+          <div class="sitem2 rv">
+            <span class="snum">04</span
+            ><span class="sname">Consultoría en Experiencia de Usuario</span
+            ><span class="stag2">Research · Strategy</span>
+          </div>
+          <div class="sitem2 rv">
+            <span class="snum">05</span
+            ><span class="sname">Prototipado Interactivo &amp; 3D</span
+            ><span class="stag2">3D · Motion</span>
+          </div>
+        </div>
       </div>
-      <div class="pcard rv">
-        <div class="tilt-glare"></div>
-        <div class="pph"><span class="ppt">02</span></div>
-        <div class="pov"><p class="pcat">UX Design · App</p><h3 class="ptitle">Nombre del Proyecto</h3><p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit nec facilisis.</p></div>
-        <div class="parr">↗</div>
-      </div>
-      <div class="pcard rv">
-        <div class="tilt-glare"></div>
-        <div class="pph"><span class="ppt">03</span></div>
-        <div class="pov"><p class="pcat">AR · Educación</p><h3 class="ptitle">Nombre del Proyecto</h3><p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit nec facilisis.</p></div>
-        <div class="parr">↗</div>
-      </div>
-      <div class="pcard rv">
-        <div class="tilt-glare"></div>
-        <div class="pph"><span class="ppt">04</span></div>
-        <div class="pov"><p class="pcat">3D · Retail</p><h3 class="ptitle">Nombre del Proyecto</h3><p class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit nec facilisis.</p></div>
-        <div class="parr">↗</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- 3D SECTION -->
-<div id="scene-3d">
-  <canvas id="three-scene"></canvas>
-  <span class="scene-label">Experiencias tridimensionales</span>
-</div>
-
-<!-- PROCESO -->
-<section id="proceso" class="diag">
-  <div class="cont">
-    <p class="stag">Metodología</p>
-    <h2 class="stitle">Nuestro<br><span>Proceso</span></h2>
-    <div class="prgrid">
-      <div class="prstep rv"><span class="prnum">01</span><p class="prtitle">Descubrir</p><p class="prdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum.</p></div>
-      <div class="prstep rv"><span class="prnum">02</span><p class="prtitle">Diseñar</p><p class="prdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum.</p></div>
-      <div class="prstep rv"><span class="prnum">03</span><p class="prtitle">Prototipar</p><p class="prdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum.</p></div>
-      <div class="prstep rv"><span class="prnum">04</span><p class="prtitle">Lanzar</p><p class="prdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- EQUIPO OVERVIEW -->
-<section id="equipo" class="diag">
-  <div class="section-particles"><canvas id="particles-equipo"></canvas></div>
-  <div class="cont">
-    <div class="eintro">
-      <div>
-        <p class="stag">El equipo</p>
-        <h2 class="stitle">Las mentes<br><span>detrás</span></h2>
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="diag">
+      <div class="section-particles">
+        <canvas id="particles-proyectos"></canvas>
       </div>
-      <p>Conoce un poco más acerca de quién es cada uno de los integrantes del equipo, de manera individual, así como habilidades y contactos.</p>
-    </div>
-    <!-- <div class="mgrid">
+      <div class="cont">
+        <div id="gallery-3d-section" style="margin-bottom: 0">
+          <!-- THE GALLERY — sala 3D -->
+          <!-- <div style="position: relative">
+            <div
+              id="gallery-3d"
+              style="
+                width: 100%;
+                height: 560px;
+                border-radius: 0;
+                overflow: hidden;
+                border: 1px solid rgba(232, 96, 10, 0.15);
+              "
+            ></div>
+            <div id="gallery-overlay"></div>
+            <div
+              style="
+                position: absolute;
+                bottom: 20px;
+                right: 24px;
+                font-family: 'Space Mono', monospace;
+                font-size: 9px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: rgba(240, 237, 232, 0.28);
+                pointer-events: none;
+              "
+            >
+              Hover para explorar · Click para abrir · ← → para rotar
+            </div>
+          </div>
+          <p
+            style="
+              font-family: 'Space Mono', monospace;
+              font-size: 9px;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: rgba(240, 237, 232, 0.25);
+              text-align: center;
+              padding: 14px 0 40px;
+              border-bottom: 1px solid rgba(240, 237, 232, 0.06);
+            "
+          >
+            — También disponibles como tarjetas —
+          </p> -->
+        </div>
+
+        <div class="phdr">
+          <div>
+            <p class="stag">Portafolio</p>
+            <h2 class="stitle">
+              Proyectos que<br /><span>hemos desarrollado</span>
+            </h2>
+          </div>
+          <a href="#" class="plink">Ver todos →</a>
+        </div>
+        <div class="pgrid">
+          <div class="pcard rv">
+            <div class="tilt-glare"></div>
+            <div class="pph"><span class="ppt">PROJECT 01</span></div>
+            <div class="pov">
+              <p class="pcat">Experiencia VR · Cliente corporativo</p>
+              <h3 class="ptitle">Título del Proyecto Destacado</h3>
+              <p class="pdesc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                vehicula leo nec justo fermentum.
+              </p>
+            </div>
+            <div class="parr">↗</div>
+          </div>
+          <div class="pcard rv">
+            <div class="tilt-glare"></div>
+            <div class="pph"><span class="ppt">02</span></div>
+            <div class="pov">
+              <p class="pcat">UX Design · App</p>
+              <h3 class="ptitle">Nombre del Proyecto</h3>
+              <p class="pdesc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit nec
+                facilisis.
+              </p>
+            </div>
+            <div class="parr">↗</div>
+          </div>
+          <div class="pcard rv">
+            <div class="tilt-glare"></div>
+            <div class="pph"><span class="ppt">03</span></div>
+            <div class="pov">
+              <p class="pcat">AR · Educación</p>
+              <h3 class="ptitle">Nombre del Proyecto</h3>
+              <p class="pdesc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit nec
+                facilisis.
+              </p>
+            </div>
+            <div class="parr">↗</div>
+          </div>
+          <div class="pcard rv">
+            <div class="tilt-glare"></div>
+            <div class="pph"><span class="ppt">04</span></div>
+            <div class="pov">
+              <p class="pcat">3D · Retail</p>
+              <h3 class="ptitle">Nombre del Proyecto</h3>
+              <p class="pdesc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit nec
+                facilisis.
+              </p>
+            </div>
+            <div class="parr">↗</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D SECTION -->
+    <!-- <div id="scene-3d">
+      <canvas id="three-scene"></canvas>
+      <span class="scene-label">Experiencias tridimensionales</span>
+    </div> -->
+
+    <!-- PROCESO -->
+    <section id="proceso" class="diag">
+      <div class="cont">
+        <p class="stag">Metodología</p>
+        <h2 class="stitle">Nuestro <span>Proceso</span></h2>
+        <div class="prgrid">
+          <div class="prstep rv">
+            <span class="prnum">01</span>
+            <p class="prtitle">Descubrir</p>
+            <p class="prdesc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              vehicula leo nec justo fermentum.
+            </p>
+          </div>
+          <div class="prstep rv">
+            <span class="prnum">02</span>
+            <p class="prtitle">Diseñar</p>
+            <p class="prdesc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              vehicula leo nec justo fermentum.
+            </p>
+          </div>
+          <div class="prstep rv">
+            <span class="prnum">03</span>
+            <p class="prtitle">Prototipar</p>
+            <p class="prdesc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              vehicula leo nec justo fermentum.
+            </p>
+          </div>
+          <div class="prstep rv">
+            <span class="prnum">04</span>
+            <p class="prtitle">Lanzar</p>
+            <p class="prdesc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              vehicula leo nec justo fermentum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO OVERVIEW -->
+    <section id="equipo" class="diag">
+      <div class="section-particles">
+        <canvas id="particles-equipo"></canvas>
+      </div>
+      <div class="cont">
+        <div class="eintro">
+          <div>
+            <p class="stag">El equipo</p>
+            <h2 class="stitle">Las mentes<br /><span>detrás</span></h2>
+          </div>
+          <p>
+            Conoce un poco más acerca de quién es cada uno de los integrantes
+            del equipo, de manera individual, así como habilidades y contactos.
+          </p>
+        </div>
+        <!-- <div class="mgrid">
       <div class="mcard rv">
         <div class="mfoto"><span class="mfph">01</span><div class="mfov"></div></div>
         <div class="minfo"><p class="mrole">UX Lead · Co-Founder</p><h3 class="mname">Nombre Apellido</h3><p class="mdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit nec facilisis arcu.</p><div class="mskills"><span class="spill">UX Research</span><span class="spill">Figma</span><span class="spill">VR</span></div></div>
@@ -228,53 +399,55 @@
         <div class="minfo"><p class="mrole">Frontend Dev · Strategist</p><h3 class="mname">Nombre Apellido</h3><p class="mdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit nec facilisis arcu.</p><div class="mskills"><span class="spill">React</span><span class="spill">Three.js</span><span class="spill">WebXR</span></div></div>
       </div>
     </div> -->
-  </div>
-</section>
+      </div>
+    </section>
 
-<!-- MIEMBROS INDIVIDUALES — generados desde members/*.js -->
-<div id="members-container"></div>
+    <!-- MIEMBROS INDIVIDUALES — generados desde members/*.js -->
+    <div id="members-container"></div>
 
-<!-- CONTACTO -->
-<section id="contacto">
-  <div class="cont">
-    <p class="clbl">Trabajemos juntos</p>
-    <h2 class="ch2">¿Tienes un<br><span>Proyecto?</span></h2>
-    <p class="csub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula leo nec justo fermentum nec facilisis arcu.</p>
-    <div class="cacts">
-      <a href="mailto:hola@studioxr.co" class="btnp">Escribirnos</a>
-      <a href="#equipo" class="btng">Conocer el equipo</a>
-    </div>
-    <span class="cemail">hola@studioxr.co</span>
-    <div class="csoc">
-      <a href="#" class="slink">Instagram</a>
-      <a href="#" class="slink">LinkedIn</a>
-      <a href="#" class="slink">Behance</a>
-      <a href="#" class="slink">GitHub</a>
-    </div>
-  </div>
-</section>
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="cont">
+        <p class="clbl">Trabajemos juntos</p>
+        <h2 class="ch2">¿Tienes un<br /><span>Proyecto?</span></h2>
+        <p class="csub">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          vehicula leo nec justo fermentum nec facilisis arcu.
+        </p>
+        <div class="cacts">
+          <a href="mailto:hola@studioxr.co" class="btnp">Escribirnos</a>
+          <a href="#equipo" class="btng">Conocer el equipo</a>
+        </div>
+        <span class="cemail">hola@studioxr.co</span>
+        <div class="csoc">
+          <a href="#" class="slink">Instagram</a>
+          <a href="#" class="slink">LinkedIn</a>
+          <a href="#" class="slink">Behance</a>
+          <a href="#" class="slink">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <a href="#" class="flogo">STUDIO<span>XR</span></a>
-  <ul class="fnav">
-    <li><a href="#empresa">Empresa</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#equipo">Equipo</a></li>
-  </ul>
-  <p class="fcopy">&copy; 2025 StudioXR &mdash; Cali, Colombia</p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+      <a href="#" class="flogo">STUDIO<span>XR</span></a>
+      <ul class="fnav">
+        <li><a href="#empresa">Empresa</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+      </ul>
+      <p class="fcopy">&copy; 2025 StudioXR &mdash; Cali, Colombia</p>
+    </footer>
 
-<!-- Datos: proyectos y miembros -->
-<script src="data/projects.js"></script>
-<script src="members/alejo.js"></script>
-<script src="members/andres.js"></script>
-<script src="members/nicolas.js"></script>
-<script src="members/julian.js"></script>
-<!-- Three.js + lógica principal -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="main.js"></script>
-
-</body>
+    <!-- Datos: proyectos y miembros -->
+    <script src="data/projects.js"></script>
+    <script src="members/alejo.js"></script>
+    <script src="members/andres.js"></script>
+    <script src="members/nicolas.js"></script>
+    <script src="members/julian.js"></script>
+    <!-- Three.js + lógica principal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
